@@ -1,0 +1,254 @@
+/* ==========================================================================
+   OpenFlight Labs - Museum Specimen Archive Theme
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Custom Properties (Theme)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Color Palette - Museum Specimen Archive */
+  --color-background: #F5F1E8;
+  --color-text: #2C2416;
+  --color-text-muted: #5C5040;
+  --color-text-light: #8B7E6A;
+  --color-accent: #6B8E6B;
+  --color-accent-dark: #4A6B4A;
+  --color-highlight: #C17F59;
+  --color-label-bg: #E8E4D9;
+  --color-label-border: #C4B998;
+  --color-border: #C4B998;
+  --color-card-bg: #FFFBF2;
+  --color-card-shadow: rgba(44, 36, 22, 0.1);
+  --color-glass-slide: rgba(200, 195, 180, 0.3);
+
+  /* Status Colors */
+  --status-hypothesis: #7BA3C9;
+  --status-in-progress: #D4A55A;
+  --status-completed: #6B8E6B;
+  --status-archived: #8B7E6A;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Source Serif Pro', Georgia, serif;
+  --font-label: 'Courier Prime', 'Courier New', monospace;
+  --font-accent: 'Caveat', cursive;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --content-width: 800px;
+  --border-radius: 4px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-medium: 300ms ease;
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base Styles
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  min-height: 100vh;
+  /* Subtle paper texture */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23C4B998' fill-opacity='0.05' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+
+/* --------------------------------------------------------------------------
+   Typography
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: var(--space-md);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: var(--space-md);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-accent-dark);
+  text-decoration: underline;
+}
+
+.handwritten {
+  font-family: var(--font-accent);
+  font-size: 1.25em;
+}
+
+/* --------------------------------------------------------------------------
+   Layout
+   -------------------------------------------------------------------------- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--space-lg);
+}
+
+.content {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   Navigation
+   -------------------------------------------------------------------------- */
+.nav {
+  background-color: var(--color-label-bg);
+  border-bottom: 2px solid var(--color-border);
+  padding: var(--space-md) 0;
+}
+
+.nav__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.nav__brand {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.nav__brand:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.nav__links {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+.nav__link {
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: var(--space-xs) 0;
+  border-bottom: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.nav__link:hover,
+.nav__link--active {
+  color: var(--color-text);
+  border-bottom-color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+.footer {
+  margin-top: var(--space-3xl);
+  padding: var(--space-xl) 0;
+  background-color: var(--color-label-bg);
+  border-top: 2px solid var(--color-border);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-sm) var(--space-lg);
+  border: 2px solid var(--color-border);
+  background-color: var(--color-card-bg);
+  color: var(--color-text);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn:hover {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: var(--color-accent-dark);
+  border-color: var(--color-accent-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  h3 { font-size: 1.25rem; }
+
+  .nav__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

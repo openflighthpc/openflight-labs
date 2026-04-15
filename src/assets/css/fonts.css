@@ -1,0 +1,15 @@
+/* ==========================================================================
+   Web Fonts - Google Fonts
+   ========================================================================== */
+
+/* Playfair Display - Elegant serif for headings */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* Source Serif Pro - Readable serif for body text */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap');
+
+/* Courier Prime - Typewriter/specimen label style */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+
+/* Caveat - Handwritten annotations */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&display=swap');

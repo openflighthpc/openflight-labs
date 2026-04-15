@@ -1,0 +1,21 @@
+{
+  "name": "openflight-labs",
+  "version": "1.0.0",
+  "description": "OpenFlight Labs - A museum specimen archive for R&D experiments",
+  "scripts": {
+    "dev": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "keywords": [
+    "openflight",
+    "hpc",
+    "experiments",
+    "research"
+  ],
+  "author": "OpenFlightHPC",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

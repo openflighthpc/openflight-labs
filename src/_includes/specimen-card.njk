@@ -1,0 +1,22 @@
+<a href="/lab/{{ id | lower }}/" class="specimen-card">
+  <div class="specimen-card__image">
+    {% if thumbnail %}
+    <img src="{{ thumbnail }}" alt="{{ title }}" loading="lazy">
+    {% else %}
+    <img src="/assets/images/placeholder.svg" alt="{{ title }}" loading="lazy">
+    {% endif %}
+  </div>
+  <div class="specimen-card__content">
+    <p class="specimen-card__id">Specimen {{ id }}</p>
+    <h3 class="specimen-card__title">{{ title }}</h3>
+    {% if hypothesis %}
+    <p class="specimen-card__hypothesis">{{ hypothesis }}</p>
+    {% endif %}
+    <div class="specimen-card__footer">
+      <span class="status-badge status-badge--{{ status }}">{{ status | capitalize }}</span>
+      {% if date_start %}
+      <span class="specimen-card__date">{{ date_start | formatDate }}</span>
+      {% endif %}
+    </div>
+  </div>
+</a>

@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: Experiment Collection
+permalink: /experiments/
+---
+
+<section class="hero" style="padding: var(--space-2xl) 0;">
+  <div class="container">
+    <h1 class="hero__title" style="font-size: 2.5rem;">The <span>Collection</span></h1>
+    <p class="hero__subtitle">Browse all specimens in our archive</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="filter-bar">
+    <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="hypothesis">Hypothesis</button>
+    <button class="filter-btn" data-filter="in-progress">In Progress</button>
+    <button class="filter-btn" data-filter="completed">Completed</button>
+    <button class="filter-btn" data-filter="archived">Archived</button>
+  </div>
+
+  <div class="specimen-gallery">
+    {% for experiment in collections.experiments %}
+      {% set id = experiment.data.id %}
+      {% set title = experiment.data.title %}
+      {% set status = experiment.data.status %}
+      {% set hypothesis = experiment.data.hypothesis %}
+      {% set date_start = experiment.data.date_start %}
+      {% set thumbnail = experiment.data.thumbnail %}
+      {% include "specimen-card.njk" %}
+    {% endfor %}
+  </div>
+
+  {% if collections.experiments.length == 0 %}
+  <div style="text-align: center; padding: var(--space-3xl);">
+    <p style="font-family: var(--font-accent); font-size: 1.5rem; color: var(--color-text-muted);">
+      The archive is empty. Check back soon for new specimens!
+    </p>
+  </div>
+  {% endif %}
+</div>
+
+<script>
+  // Simple filter functionality
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active state
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('filter-btn--active'));
+      btn.classList.add('filter-btn--active');
+
+      const filter = btn.dataset.filter;
+      const cards = document.querySelectorAll('.specimen-card');
+
+      cards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'block';
+        } else {
+          const badge = card.querySelector('.status-badge');
+          const status = badge ? badge.classList[1].replace('status-badge--', '') : '';
+          card.style.display = status === filter ? 'block' : 'none';
+        }
+      });
+    });
+  });
+</script>

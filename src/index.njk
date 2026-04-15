@@ -1,0 +1,80 @@
+---
+layout: base.njk
+title: Welcome to the Archive
+---
+
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">OpenFlight <span>Labs</span></h1>
+    <p class="hero__subtitle">A Museum of R&D Experiments</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="archive-entrance">
+    <p class="archive-entrance__text">
+      Welcome to the <em>OpenFlight Labs Archive</em>, a curated collection of research and development
+      experiments from the OpenFlightHPC group. Each specimen in our collection represents a unique
+      exploration—an idea tested, a hypothesis pursued, a discovery made.
+    </p>
+    <p class="archive-entrance__text">
+      Browse our specimens to learn what worked, what didn't, and what we discovered along the way.
+    </p>
+  </div>
+
+  <section class="section">
+    <h2 class="section__title">Recent Additions to the Collection</h2>
+
+    <div class="filter-bar">
+      <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="hypothesis">Hypothesis</button>
+      <button class="filter-btn" data-filter="in-progress">In Progress</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+      <button class="filter-btn" data-filter="archived">Archived</button>
+    </div>
+
+    <div class="specimen-gallery">
+      {% for experiment in collections.experiments %}
+        {% if loop.index <= 6 %}
+          {% set id = experiment.data.id %}
+          {% set title = experiment.data.title %}
+          {% set status = experiment.data.status %}
+          {% set hypothesis = experiment.data.hypothesis %}
+          {% set date_start = experiment.data.date_start %}
+          {% set thumbnail = experiment.data.thumbnail %}
+          {% include "specimen-card.njk" %}
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if collections.experiments.length > 6 %}
+    <div style="text-align: center; margin-top: var(--space-2xl);">
+      <a href="/experiments/" class="btn">View Full Collection</a>
+    </div>
+    {% endif %}
+  </section>
+</div>
+
+<script>
+  // Simple filter functionality
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active state
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('filter-btn--active'));
+      btn.classList.add('filter-btn--active');
+
+      const filter = btn.dataset.filter;
+      const cards = document.querySelectorAll('.specimen-card');
+
+      cards.forEach(card => {
+        if (filter === 'all') {
+          card.style.display = 'block';
+        } else {
+          const badge = card.querySelector('.status-badge');
+          const status = badge ? badge.classList[1].replace('status-badge--', '') : '';
+          card.style.display = status === filter ? 'block' : 'none';
+        }
+      });
+    });
+  });
+</script>

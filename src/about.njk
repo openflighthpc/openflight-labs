@@ -1,0 +1,98 @@
+---
+layout: base.njk
+title: About
+permalink: /about/
+---
+
+<div class="container" style="max-width: var(--content-width); padding-top: var(--space-2xl);">
+  <article class="content">
+    <header style="margin-bottom: var(--space-2xl);">
+      <h1>About the Archive</h1>
+      <p class="handwritten" style="font-size: 1.3rem; color: var(--color-text-muted);">
+        A brief history of the OpenFlight Labs collection
+      </p>
+    </header>
+
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">What is OpenFlight Labs?</h2>
+      <div class="experiment-content">
+        <p>
+          OpenFlight Labs is a museum-style archive for research and development experiments
+          conducted by the <a href="https://openflighthpc.org" target="_blank" rel="noopener">OpenFlightHPC</a>
+          group. We believe that every experiment—whether successful or not—has value worth preserving.
+        </p>
+        <p>
+          Like a natural history museum curates specimens from field research, we curate "specimens"
+          from our R&D work. Each experiment documents what we tried, what we learned, and what we
+          would do differently next time.
+        </p>
+      </div>
+    </section>
+
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Why Archive Experiments?</h2>
+      <div class="experiment-content">
+        <p>
+          In fast-paced R&D environments, valuable insights often get lost. A hackathon project
+          might yield an interesting approach that doesn't quite work—but three months later,
+          someone else might have the missing piece of the puzzle.
+        </p>
+        <p>
+          By preserving our experiments as "specimens" in a structured archive, we create a
+          searchable knowledge base that accelerates future work and prevents us from repeating
+          the same investigations.
+        </p>
+      </div>
+    </section>
+
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Specimen Status</h2>
+      <div class="experiment-content">
+        <p>Each experiment is categorized by its status:</p>
+        <ul>
+          <li>
+            <strong class="status-badge status-badge--hypothesis">Hypothesis</strong> —
+            An idea proposed for investigation. Not yet started.
+          </li>
+          <li>
+            <strong class="status-badge status-badge--in-progress">In Progress</strong> —
+            Currently being researched or developed.
+          </li>
+          <li>
+            <strong class="status-badge status-badge--completed">Completed</strong> —
+            Research finished with documented outcomes and findings.
+          </li>
+          <li>
+            <strong class="status-badge status-badge--archived">Archived</strong> —
+            No longer actively maintained, but preserved for reference.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Contributing</h2>
+      <div class="experiment-content">
+        <p>
+          Members of the OpenFlightHPC group can submit new experiments by creating markdown
+          files in the <code>src/experiments/</code> directory. Each experiment follows a
+          structured format with YAML front matter for metadata and markdown for content.
+        </p>
+        <p>
+          For more information about contributing, see the project README on GitHub.
+        </p>
+      </div>
+    </section>
+
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Credits</h2>
+      <div class="experiment-content">
+        <p>
+          OpenFlight Labs is maintained by the OpenFlightHPC team. This site is built with
+          <a href="https://www.11ty.dev/" target="_blank" rel="noopener">Eleventy</a> and
+          styled with a custom museum specimen archive theme.
+        </p>
+      </div>
+    </section>
+  </article>
+</div>
