@@ -269,6 +269,16 @@
   margin-bottom: var(--space-sm);
 }
 
+/* Images and media - fit to content width */
+.experiment-content img,
+.experiment-content video,
+.experiment-content iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: var(--space-lg) 0;
+}
+
 /* --------------------------------------------------------------------------
    Code Blocks (like typed on a typewriter)
    -------------------------------------------------------------------------- */
