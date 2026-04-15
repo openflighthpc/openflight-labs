@@ -10,7 +10,7 @@ links:
   - label: Website
     url: https://ghpc.openflighthpc.org
 ---
-![](/assets/images/experiments/e010/ghpc-how-it-works.gif)
+![A short animation showing the launch process of this stack](/assets/images/experiments/e010/ghpc-how-it-works.gif)
 ## Overview
 
 GHPC is an experimental Rocky 9 stack built around diskless PXE booting and overlayfs to provide a scalable, manageable network of HPC clusters to delivery the HPC service for a single site.
