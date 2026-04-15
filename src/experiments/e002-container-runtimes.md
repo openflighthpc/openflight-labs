@@ -1,4 +1,5 @@
 ---
+layout: experiment.njk
 id: E002
 title: "Container Runtime Performance Comparison"
 status: completed

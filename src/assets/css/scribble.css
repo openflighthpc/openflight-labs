@@ -1,0 +1,505 @@
+/* ==========================================================================
+   Scribbled Document Styles - Lab Notebook Aesthetic
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Desk Surface Background (the "surface" papers are laying on)
+   -------------------------------------------------------------------------- */
+.experiment-page {
+  background-color: #4A4238;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23383028' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4h-9v4h-1v-4H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15v-9H0v-1h15V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h9V0h1v15h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9h4v1h-4v9zm-1 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-10 0v-9h-9v9h9zm-9-10h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9zm10 0h9v-9h-9v9z'/%3E%3Cpath d='M6 6h9v9H6V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zm10 0h9v9h-9V6zM6 16h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 26h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 36h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 46h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 56h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 66h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 76h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 86h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zM6 96h9v9H6v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9zm10 0h9v9h-9v-9z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  min-height: 100vh;
+  padding: var(--space-2xl) var(--space-md);
+}
+
+/* --------------------------------------------------------------------------
+   Paper Document (the main content "page")
+   -------------------------------------------------------------------------- */
+.paper-document {
+  background: linear-gradient(135deg, #F8F4E8 0%, #F5F0E0 50%, #EDE8D8 100%);
+  max-width: 850px;
+  margin: 0 auto;
+  padding: var(--space-2xl);
+  position: relative;
+  box-shadow:
+    0 1px 1px rgba(0,0,0,0.12),
+    0 2px 2px rgba(0,0,0,0.12),
+    0 4px 4px rgba(0,0,0,0.12),
+    0 8px 8px rgba(0,0,0,0.12),
+    0 16px 16px rgba(0,0,0,0.12);
+
+  /* Slight rotation for "casually placed" effect */
+  transform: rotate(-0.5deg);
+
+  /* Paper texture */
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  background-blend-mode: multiply;
+}
+
+/* Worn paper edges */
+.paper-document::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 60px rgba(139, 126, 106, 0.2),
+    inset 0 0 20px rgba(139, 126, 106, 0.1);
+}
+
+/* Coffee ring stain */
+.paper-document::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: 60px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, transparent 30%, rgba(139, 106, 80, 0.08) 50%, transparent 70%);
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+/* --------------------------------------------------------------------------
+   Tape Strip (top attachment)
+   -------------------------------------------------------------------------- */
+.tape-strip {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) rotate(2deg);
+  width: 120px;
+  height: 35px;
+  background: linear-gradient(180deg, rgba(255, 248, 220, 0.7) 0%, rgba(245, 240, 200, 0.6) 100%);
+  border-left: 1px dashed rgba(200, 185, 152, 0.4);
+  border-right: 1px dashed rgba(200, 185, 152, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.tape-strip::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.1) 10px,
+    rgba(255, 255, 255, 0.1) 20px
+  );
+}
+
+/* --------------------------------------------------------------------------
+   Handwritten Title Styling
+   -------------------------------------------------------------------------- */
+.experiment-header__id {
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  color: #6B5B4F;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-sm);
+  transform: rotate(-1deg);
+}
+
+.experiment-header__title {
+  font-family: var(--font-accent);
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #2C2416;
+  line-height: 1.2;
+  margin-bottom: var(--space-lg);
+  position: relative;
+
+  /* Hand-drawn underline */
+  text-decoration: none;
+  display: inline-block;
+}
+
+.experiment-header__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 6'%3E%3Cpath d='M0 3 Q 25 1, 50 3 T 100 3' stroke='%236B8E6B' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
+  background-size: 100px 6px;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Specimen Label (pinned note card style)
+   -------------------------------------------------------------------------- */
+.specimen-label {
+  background: #FEFDF8;
+  border: none;
+  padding: var(--space-lg);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  line-height: 1.8;
+  position: relative;
+  margin: var(--space-xl) 0;
+  box-shadow:
+    2px 3px 8px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+
+  /* Slight rotation like a pinned note */
+  transform: rotate(0.8deg);
+
+  /* Paper clip effect */
+}
+
+.specimen-label::before,
+.specimen-label::after {
+  display: none;
+}
+
+/* Paper clip */
+.specimen-label {
+  border-left: 4px solid #C4B998;
+}
+
+/* --------------------------------------------------------------------------
+   Section Headers (handwritten style)
+   -------------------------------------------------------------------------- */
+.experiment-section__title {
+  font-family: var(--font-accent);
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #3D3528;
+  margin: var(--space-2xl) 0 var(--space-lg);
+  padding-bottom: var(--space-sm);
+  border-bottom: none;
+  position: relative;
+  display: block;
+}
+
+.experiment-section__title::before {
+  display: none;
+}
+
+/* Hand-drawn squiggle underline */
+.experiment-section__title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 8px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 10'%3E%3Cpath d='M0 5 Q 50 2, 100 5 T 200 5' stroke='%23C17F59' stroke-width='2' fill='none'/%3E%3C/svg%3E") repeat-x;
+  background-size: 200px 10px;
+  opacity: 0.6;
+}
+
+/* --------------------------------------------------------------------------
+   Content Styling (handwritten feel)
+   -------------------------------------------------------------------------- */
+.experiment-content {
+  font-family: var(--font-body);
+  font-size: 1.05rem;
+  line-height: 1.9;
+  color: #2C2416;
+}
+
+.experiment-content p {
+  margin-bottom: var(--space-lg);
+  position: relative;
+}
+
+/* Handwritten hypothesis */
+.handwritten {
+  font-family: var(--font-accent);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  color: #4A4035;
+  padding-left: var(--space-lg);
+  border-left: 3px solid var(--color-accent);
+  margin: var(--space-lg) 0;
+  transform: rotate(-0.3deg);
+}
+
+.experiment-content h2 {
+  font-family: var(--font-accent);
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #3D3528;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+}
+
+.experiment-content h3 {
+  font-family: var(--font-accent);
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #4A4035;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-md);
+}
+
+/* Lists with handwritten markers */
+.experiment-content ul {
+  list-style: none;
+  margin-left: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.experiment-content ul li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+}
+
+.experiment-content ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+.experiment-content ol {
+  margin-left: var(--space-lg);
+  margin-bottom: var(--space-lg);
+}
+
+.experiment-content ol li {
+  margin-bottom: var(--space-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Code Blocks (like typed on a typewriter)
+   -------------------------------------------------------------------------- */
+.experiment-content pre {
+  background-color: #FAF8F3;
+  border: 1px solid #D4C9B0;
+  border-left: 4px solid #8B7355;
+  padding: var(--space-lg);
+  margin: var(--space-xl) 0;
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  overflow-x: auto;
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.03),
+    2px 2px 5px rgba(0, 0, 0, 0.08);
+  transform: rotate(-0.2deg);
+}
+
+.experiment-content code {
+  font-family: 'Courier Prime', 'Courier New', monospace;
+  background-color: rgba(200, 185, 152, 0.2);
+  padding: 0.1em 0.3em;
+  border-radius: 2px;
+  border-bottom: 1px dashed rgba(139, 115, 85, 0.3);
+}
+
+.experiment-content pre code {
+  background: none;
+  padding: 0;
+  border-bottom: none;
+}
+
+/* --------------------------------------------------------------------------
+   Links (handwritten style)
+   -------------------------------------------------------------------------- */
+.experiment-content a {
+  color: #6B8E6B;
+  text-decoration: none;
+  border-bottom: 1px dashed #6B8E6B;
+  transition: all 0.2s ease;
+}
+
+.experiment-content a:hover {
+  color: #4A6B4A;
+  border-bottom-style: solid;
+}
+
+.link-list__link {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  color: #6B8E6B;
+  border-bottom: 1px dashed #6B8E6B;
+}
+
+.link-list__link::before {
+  content: '→';
+  margin-right: var(--space-sm);
+  color: #C17F59;
+}
+
+/* --------------------------------------------------------------------------
+   Tags (like sticker labels)
+   -------------------------------------------------------------------------- */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px dashed #D4C9B0;
+}
+
+.tag {
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  padding: var(--space-xs) var(--space-md);
+  background: linear-gradient(135deg, #FEFDF8 0%, #F8F4E8 100%);
+  border: 1px solid #D4C9B0;
+  border-radius: 2px;
+  color: #5C5040;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.08);
+  transform: rotate(var(--rotation, 0deg));
+}
+
+.tag:nth-child(odd) {
+  --rotation: -1deg;
+}
+
+.tag:nth-child(even) {
+  --rotation: 1deg;
+}
+
+.tag:nth-child(3n) {
+  --rotation: 0.5deg;
+}
+
+/* --------------------------------------------------------------------------
+   Team Members (margin note style)
+   -------------------------------------------------------------------------- */
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.team-member {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: #4A4035;
+  padding: var(--space-xs) var(--space-sm);
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  transform: rotate(-0.5deg);
+}
+
+.team-member__avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #D4C9B0 0%, #C4B998 100%);
+  border: 2px solid #8B7355;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-accent);
+  font-size: 0.8rem;
+  color: #4A4035;
+}
+
+.team-member a {
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  color: #8B7355;
+  text-decoration: none;
+  border-bottom: 1px dashed #8B7355;
+}
+
+/* --------------------------------------------------------------------------
+   Status Badge (stamp style)
+   -------------------------------------------------------------------------- */
+.status-badge {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: var(--space-xs) var(--space-md);
+  border-radius: 2px;
+  border: 2px solid;
+  transform: rotate(-2deg);
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.status-badge--hypothesis {
+  background-color: rgba(123, 163, 201, 0.15);
+  border-color: #7BA3C9;
+  color: #5A83A9;
+}
+
+.status-badge--in-progress {
+  background-color: rgba(212, 165, 90, 0.2);
+  border-color: #D4A55A;
+  color: #B08540;
+}
+
+.status-badge--completed {
+  background-color: rgba(107, 142, 107, 0.2);
+  border-color: #6B8E6B;
+  color: #4A6B4A;
+}
+
+.status-badge--archived {
+  background-color: rgba(139, 126, 106, 0.2);
+  border-color: #8B7E6A;
+  color: #6B5E4A;
+}
+
+/* --------------------------------------------------------------------------
+   Margin Annotation (decorative element)
+   -------------------------------------------------------------------------- */
+.margin-note {
+  position: absolute;
+  right: -150px;
+  width: 130px;
+  font-family: var(--font-accent);
+  font-size: 0.9rem;
+  color: #8B7355;
+  transform: rotate(3deg);
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 900px) {
+  .paper-document {
+    padding: var(--space-lg);
+    margin: var(--space-md);
+  }
+
+  .margin-note {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .experiment-page {
+    padding: var(--space-md);
+  }
+
+  .paper-document {
+    padding: var(--space-md);
+    transform: none;
+  }
+
+  .experiment-header__title {
+    font-size: 2rem;
+  }
+
+  .experiment-section__title {
+    font-size: 1.4rem;
+  }
+}

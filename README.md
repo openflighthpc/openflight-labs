@@ -42,9 +42,11 @@ Each experiment file requires YAML front matter:
 
 ```yaml
 ---
+layout: experiment.njk             # Required: Layout template
 id: E005                          # Required: Unique experiment ID
 title: "Your Experiment Title"     # Required: Human-readable title
 status: hypothesis                 # Required: hypothesis | in-progress | completed | archived
+permalink: /lab/e005/             # Required: URL path
 hypothesis: "What you're testing"  # Required: The core hypothesis
 date_start: 2024-09-01            # Required: Start date (YYYY-MM-DD)
 date_end: 2024-10-15              # Optional: End date

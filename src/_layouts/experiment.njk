@@ -2,84 +2,88 @@
 layout: base.njk
 ---
 
-<article class="experiment container">
-  <header class="experiment-header">
-    <p class="experiment-header__id">Specimen {{ id }}</p>
-    <h1 class="experiment-header__title">{{ title }}</h1>
-    <div class="specimen-label">
-      <div class="specimen-label__field">
-        <span class="specimen-label__key">Status:</span>
-        <span class="status-badge status-badge--{{ status }}">{{ status | capitalize }}</span>
-      </div>
-      {% if date_start %}
-      <div class="specimen-label__field">
-        <span class="specimen-label__key">Date:</span>
-        <span class="specimen-label__value">{{ date_start | formatDate }}{% if date_end %} — {{ date_end | formatDate }}{% endif %}</span>
-      </div>
-      {% endif %}
-      {% if team and team.length > 0 %}
-      <div class="specimen-label__field">
-        <span class="specimen-label__key">Team:</span>
-        <span class="specimen-label__value">{% for member in team %}{{ member.name }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
-      </div>
-      {% endif %}
-      {% if tags and tags.length > 0 %}
-      <div class="specimen-label__field">
-        <span class="specimen-label__key">Tags:</span>
-        <span class="specimen-label__value">{{ tags.join(', ') }}</span>
-      </div>
-      {% endif %}
-    </div>
-  </header>
+<div class="experiment-page">
+  <article class="paper-document">
+    <div class="tape-strip"></div>
 
-  {% if hypothesis %}
-  <section class="experiment-section">
-    <h2 class="experiment-section__title">Hypothesis</h2>
-    <div class="experiment-content">
-      <p class="handwritten">{{ hypothesis }}</p>
-    </div>
-  </section>
-  {% endif %}
-
-  <div class="experiment-content">
-    {{ content | safe }}
-  </div>
-
-  {% if links and links.length > 0 %}
-  <section class="experiment-section">
-    <h2 class="experiment-section__title">Links</h2>
-    <ul class="link-list">
-      {% for link in links %}
-      <li class="link-list__item">
-        <a href="{{ link.url }}" class="link-list__link" target="_blank" rel="noopener">{{ link.label }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </section>
-  {% endif %}
-
-  {% if team and team.length > 0 %}
-  <section class="experiment-section">
-    <h2 class="experiment-section__title">Research Team</h2>
-    <div class="team-list">
-      {% for member in team %}
-      <div class="team-member">
-        <div class="team-member__avatar">{{ member.name.charAt(0) }}</div>
-        <span>{{ member.name }}</span>
-        {% if member.github %}
-        <a href="https://github.com/{{ member.github }}" target="_blank" rel="noopener">@{{ member.github }}</a>
+    <header class="experiment-header">
+      <p class="experiment-header__id">Specimen {{ id }}</p>
+      <h1 class="experiment-header__title">{{ title }}</h1>
+      <div class="specimen-label">
+        <div class="specimen-label__field">
+          <span class="specimen-label__key">Status:</span>
+          <span class="status-badge status-badge--{{ status }}">{{ status | capitalize }}</span>
+        </div>
+        {% if date_start %}
+        <div class="specimen-label__field">
+          <span class="specimen-label__key">Date:</span>
+          <span class="specimen-label__value">{{ date_start | formatDate }}{% if date_end %} — {{ date_end | formatDate }}{% endif %}</span>
+        </div>
+        {% endif %}
+        {% if team and team.length > 0 %}
+        <div class="specimen-label__field">
+          <span class="specimen-label__key">Team:</span>
+          <span class="specimen-label__value">{% for member in team %}{{ member.name }}{% if not loop.last %}, {% endif %}{% endfor %}</span>
+        </div>
+        {% endif %}
+        {% if tags and tags.length > 0 %}
+        <div class="specimen-label__field">
+          <span class="specimen-label__key">Tags:</span>
+          <span class="specimen-label__value">{{ tags.join(', ') }}</span>
+        </div>
         {% endif %}
       </div>
+    </header>
+
+    {% if hypothesis %}
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Hypothesis</h2>
+      <div class="experiment-content">
+        <p class="handwritten">{{ hypothesis }}</p>
+      </div>
+    </section>
+    {% endif %}
+
+    <div class="experiment-content">
+      {{ content | safe }}
+    </div>
+
+    {% if links and links.length > 0 %}
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Links</h2>
+      <ul class="link-list">
+        {% for link in links %}
+        <li class="link-list__item">
+          <a href="{{ link.url }}" class="link-list__link" target="_blank" rel="noopener">{{ link.label }}</a>
+        </li>
+        {% endfor %}
+      </ul>
+    </section>
+    {% endif %}
+
+    {% if team and team.length > 0 %}
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Research Team</h2>
+      <div class="team-list">
+        {% for member in team %}
+        <div class="team-member">
+          <div class="team-member__avatar">{{ member.name.charAt(0) }}</div>
+          <span>{{ member.name }}</span>
+          {% if member.github %}
+          <a href="https://github.com/{{ member.github }}" target="_blank" rel="noopener">@{{ member.github }}</a>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
+    {% if tags and tags.length > 0 %}
+    <div class="tag-list">
+      {% for tag in tags %}
+      <span class="tag">{{ tag }}</span>
       {% endfor %}
     </div>
-  </section>
-  {% endif %}
-
-  {% if tags and tags.length > 0 %}
-  <div class="tag-list">
-    {% for tag in tags %}
-    <span class="tag">{{ tag }}</span>
-    {% endfor %}
-  </div>
-  {% endif %}
-</article>
+    {% endif %}
+  </article>
+</div>

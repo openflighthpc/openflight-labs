@@ -1,4 +1,5 @@
 ---
+layout: experiment.njk
 id: E001
 title: "AI-Powered Job Scheduler"
 status: completed

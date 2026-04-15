@@ -1,4 +1,5 @@
 ---
+layout: experiment.njk
 id: E004
 title: "HPC Workflow Visualizer"
 status: hypothesis

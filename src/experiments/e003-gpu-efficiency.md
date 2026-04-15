@@ -1,4 +1,5 @@
 ---
+layout: experiment.njk
 id: E003
 title: "GPU Efficiency Dashboard"
 status: in-progress
