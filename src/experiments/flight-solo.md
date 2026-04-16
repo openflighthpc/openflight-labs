@@ -1,9 +1,9 @@
 ---
 layout: experiment.njk
-id: E003
+id: S0L0
 title: 'Flight Solo'
 status: archived
-permalink: /lab/e003/
+permalink: /lab/S0L0/
 hypothesis: 'HPC-ready, platform-agnostic image approach to deploying HPC resources'
 date_start: 2024-08-01
 links:

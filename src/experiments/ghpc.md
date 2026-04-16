@@ -1,16 +1,16 @@
 ---
 layout: experiment.njk
-id: E010
+id: GHPC
 title: 'Diskless Stack (GHPC)'
 status: completed
-permalink: /lab/e010/
+permalink: /lab/GHPC/
 hypothesis: 'A diskless PXE boot HPC stack with overlayfs & cloud-init'
 date_start: 2025-11-01
 links:
   - label: Website
     url: https://ghpc.openflighthpc.org
 ---
-![A short animation showing the launch process of this stack](/assets/images/experiments/e010/ghpc-how-it-works.gif)
+![A short animation showing the launch process of this stack](/assets/images/experiments/GHPC/ghpc-how-it-works.gif)
 ## Overview
 
 GHPC is an experimental Rocky 9 stack built around diskless PXE booting and overlayfs to provide a scalable, manageable network of HPC clusters to delivery the HPC service for a single site.
@@ -52,4 +52,4 @@ Documentation for this project is kept minimal on the project site and is, inste
 
 The [Glow](https://github.com/charmbracelet/glow) project is used in conjunction with [a simple script](https://github.com/alces-flight/ghpc-docs) to render markdown in a legible and easily navigable manner.
 
-![Example of using the embedded documentation](/assets/images/experiments/e010/ghpc-docs.gif)
+![Example of using the embedded documentation](/assets/images/experiments/GHPC/ghpc-docs.gif)

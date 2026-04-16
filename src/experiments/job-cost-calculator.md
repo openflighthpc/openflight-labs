@@ -1,9 +1,9 @@
 ---
 layout: experiment.njk
-id: E005
+id: C0ST
 title: 'Job Cost Calculator'
 status: archived
-permalink: /lab/e005/
+permalink: /lab/C0ST/
 hypothesis: 'Translating known data about SLURM job resource utilisation onto cloud resources to estimate cost of execution'
 date_start: 2020-11-03
 links:

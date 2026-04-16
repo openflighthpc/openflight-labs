@@ -1,9 +1,9 @@
 ---
 layout: experiment.njk
-id: E001
+id: FENV
 title: 'Flight Environment'
 status: archived
-permalink: /lab/e001/
+permalink: /lab/FENV/
 hypothesis: 'A collection of tools for HPC environment accessibility and management'
 date_start: 2019-08-01
 links:

@@ -1,9 +1,9 @@
 ---
 layout: experiment.njk
-id: E006
+id: CTR1L
 title: 'Flight Control'
 status: archived
-permalink: /lab/e006/
+permalink: /lab/CTR1L/
 hypothesis: 'Predicting and capping cloud costs around a traditional-like HPC system build in the cloud with power management features to reduce costs'
 date_start: 2019-01-01
 links:

@@ -1,9 +1,9 @@
 ---
 layout: experiment.njk
-id: E004
+id: WHSE
 title: 'Flight Warehouse'
 status: archived
-permalink: /lab/e004/
+permalink: /lab/WHSE/
 hypothesis: 'A selection of templates and guides for quickstart HPC environments'
 date_start: 2023-11-03
 links:
