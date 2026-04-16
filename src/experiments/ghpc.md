@@ -52,4 +52,4 @@ Documentation for this project is kept minimal on the project site and is, inste
 
 The [Glow](https://github.com/charmbracelet/glow) project is used in conjunction with [a simple script](https://github.com/alces-flight/ghpc-docs) to render markdown in a legible and easily navigable manner.
 
-![](/assets/images/experiments/e010/ghpc-docs.gif)
+![Example of using the embedded documentation](/assets/images/experiments/e010/ghpc-docs.gif)

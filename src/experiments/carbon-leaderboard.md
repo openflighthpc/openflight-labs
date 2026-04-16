@@ -15,11 +15,11 @@ links:
 
 The OpenFlight Carbon Leaderboard was an initiative aiming to provide a simple methodology and clear comparison of Carbon Impact Estimates for a range of servers while adding a light competitive edge. The service helped get an understanding of the impact of resources (both physical and virtual) at various levels of load. 
 
-![](/assets/images/experiments/e002/carbon-leaderboard.png)
+![The Carbon Leaderboard homepage](/assets/images/experiments/e002/carbon-leaderboard.png)
 
 To deal with HPC services where multiple systems may have identical specifications the leaderboard groups them. These groups then have some helpful (and somewhat playful) comparisons for their emissions
 
-![](/assets/images/experiments/e002/carbon-leaderboard-asset.png)
+![The view of an asset on the leaderboard](/assets/images/experiments/e002/carbon-leaderboard-asset.png)
 
 ## Client Carbon Data
 
