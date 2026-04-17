@@ -13,6 +13,18 @@
       }
     });
 
+    // Find all paragraphs in doc content that contain only an image
+    const docParagraphs = document.querySelectorAll('.lined-paper__content p:has(> img:only-child)');
+    docParagraphs.forEach(p => {
+      const img = p.querySelector('img');
+      if (img && img.alt) {
+        const caption = document.createElement('span');
+        caption.className = 'polaroid-caption';
+        caption.textContent = img.alt;
+        p.appendChild(caption);
+      }
+    });
+
     // Find all .polaroid-video wrappers (auto-created by transform)
     const videoWrappers = document.querySelectorAll('.polaroid-video');
     videoWrappers.forEach(wrapper => {
