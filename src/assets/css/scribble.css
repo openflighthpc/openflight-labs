@@ -363,8 +363,8 @@
    Polaroid Video Style (stapled to document)
    -------------------------------------------------------------------------- */
 
-/* Style paragraphs that contain only a video as polaroid frames */
-.experiment-content p:has(> video:only-child) {
+/* Polaroid wrapper for videos (auto-created by transform) */
+.polaroid-video {
   background: #FEFEF9;
   padding: 10px 10px 36px 10px;
   box-shadow:
@@ -380,20 +380,11 @@
     linear-gradient(135deg, rgba(255,255,255,0.9) 0%, #FEFEF9 50%, #F5F3EB 100%);
 
   /* Slight rotation for casually placed effect */
-  transform: rotate(var(--polaroid-rotation, -1.5deg));
-}
-
-/* Alternate rotation for variety */
-.experiment-content p:nth-of-type(odd):has(> video:only-child) {
-  --polaroid-rotation: -1.5deg;
-}
-
-.experiment-content p:nth-of-type(even):has(> video:only-child) {
-  --polaroid-rotation: 1deg;
+  transform: rotate(-1.5deg);
 }
 
 /* The actual video inside the polaroid */
-.experiment-content p:has(> video:only-child) > video {
+.polaroid-video video {
   display: block;
   max-width: 100%;
   height: auto;
@@ -403,12 +394,12 @@
 }
 
 /* Staple effect at top */
-.experiment-content p:has(> video:only-child)::before {
+.polaroid-video::before {
   content: '';
   position: absolute;
   top: -5px;
   left: 50%;
-  transform: translateX(-50%) rotate(var(--staple-rotation, 3deg));
+  transform: translateX(-50%) rotate(3deg);
   width: 20px;
   height: 5px;
   background: linear-gradient(180deg,
@@ -425,13 +416,8 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
-/* Alternate staple angle for variety */
-.experiment-content p:nth-of-type(even):has(> video:only-child)::before {
-  --staple-rotation: -2deg;
-}
-
-/* Video caption uses same styling as image caption */
-.experiment-content p:has(> video:only-child) .polaroid-caption {
+/* Video caption */
+.polaroid-video .polaroid-caption {
   position: absolute;
   bottom: 8px;
   left: 12px;
@@ -444,8 +430,8 @@
   white-space: normal;
 }
 
-/* Regular videos (not in standalone paragraphs) */
-.experiment-content video:not(:only-child) {
+/* Regular videos (not in polaroid wrapper) */
+.experiment-content video:not(.polaroid-video video) {
   max-width: 100%;
   height: auto;
   display: block;

@@ -9,10 +9,29 @@ module.exports = function(eleventyConfig) {
       return content;
     }
 
-    // Replace img tags pointing to video files with video elements
+    // Replace p>img tags pointing to video files with div.polaroid-video>video elements
+    // Extract src and alt attributes regardless of their order in the tag
     return content.replace(
-      /<img([^>]*)src=["']([^"']+\.(mp4|webm|ogg|mov))["']([^>]*)alt=["']([^"']*)["']([^>]*)\/?>/gi,
-      '<video$1src="$2"$4$6 controls playsinline muted loop><span class="video-caption">$5</span></video>'
+      /<p><img([^>]*)><\/p>/gi,
+      function(match, attrs) {
+        // Check if this is a video file
+        if (!/\.(mp4|webm|ogg|mov)["']?/i.test(attrs)) {
+          return match; // Not a video, leave as-is
+        }
+
+        // Extract src attribute
+        const srcMatch = attrs.match(/src=["']([^"']+)["']/i);
+        const src = srcMatch ? srcMatch[1] : '';
+
+        // Extract alt attribute
+        const altMatch = attrs.match(/alt=["']([^"']*)["']/i);
+        const alt = altMatch ? altMatch[1] : '';
+
+        if (src && /\.(mp4|webm|ogg|mov)$/i.test(src)) {
+          return '<div class="polaroid-video"><video src="' + src + '" data-caption="' + alt + '" controls playsinline muted loop></video></div>';
+        }
+        return match;
+      }
     );
   });
 

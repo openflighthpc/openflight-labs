@@ -13,24 +13,22 @@
       }
     });
 
-    // Find all paragraphs that contain only a video (auto-polaroid)
-    const videoParagraphs = document.querySelectorAll('.experiment-content p:has(> video:only-child)');
-    videoParagraphs.forEach(p => {
-      const video = p.querySelector('video');
-      if (video) {
-        // Check for caption inside video element (from transform)
-        const internalCaption = video.querySelector('.video-caption');
-        if (internalCaption) {
+    // Find all .polaroid-video wrappers (auto-created by transform)
+    const videoWrappers = document.querySelectorAll('.polaroid-video');
+    videoWrappers.forEach(wrapper => {
+      const video = wrapper.querySelector('video');
+      if (video && !wrapper.querySelector('.polaroid-caption')) {
+        const captionText = video.dataset.caption;
+        if (captionText) {
           const caption = document.createElement('span');
           caption.className = 'polaroid-caption';
-          caption.textContent = internalCaption.textContent;
-          p.appendChild(caption);
-          internalCaption.remove();
+          caption.textContent = captionText;
+          wrapper.appendChild(caption);
         }
       }
     });
 
-    // Also handle explicit .polaroid wrappers
+    // Handle explicit .polaroid wrappers for images
     const polaroids = document.querySelectorAll('.polaroid');
     polaroids.forEach(polaroid => {
       const img = polaroid.querySelector('img');
@@ -40,16 +38,15 @@
         caption.textContent = img.alt;
         polaroid.appendChild(caption);
       }
-      // Handle video in explicit polaroid wrapper
-      const video = polaroid.querySelector('video');
-      if (video) {
-        const internalCaption = video.querySelector('.video-caption');
-        if (internalCaption && !polaroid.querySelector('.polaroid-caption')) {
+      // Handle video directly in polaroid wrapper (manual markup)
+      const video = polaroid.querySelector('video:not(.polaroid-video video)');
+      if (video && !polaroid.querySelector('.polaroid-caption')) {
+        const captionText = video.dataset.caption;
+        if (captionText) {
           const caption = document.createElement('span');
           caption.className = 'polaroid-caption';
-          caption.textContent = internalCaption.textContent;
+          caption.textContent = captionText;
           polaroid.appendChild(caption);
-          internalCaption.remove();
         }
       }
     });
