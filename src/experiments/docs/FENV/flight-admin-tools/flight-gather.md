@@ -1,6 +1,6 @@
 ---
 title: Flight Gather 
-order: 1
+order: 5
 ---
 Flight Gather collects system information into a processable YAML format.
 
@@ -15,7 +15,7 @@ Data collected by Flight Gather:
 - GPU info (name, slot)
 - Platform
 
-Further to the above, the user can provide groups (in a similar vein to [genders]({{< relref "knowledge/hpc-environment-basics/genders-pdsh.md" >}}#creating-a-genders-file)) to add further categorisation to the data. This is useful when collating the data from many systems.
+Further to the above, the user can provide groups (in a similar vein to genders files) to add further categorisation to the data. This is useful when collating the data from many systems.
 
 ## Using Flight Gather
 

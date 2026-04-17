@@ -1,6 +1,6 @@
 ---
 title: Flight Env
-order: 2
+order: 3
 ---
 
 ## Overview
@@ -80,12 +80,12 @@ The Flight Env command provides streamlined installation of many popular softwar
 
 <figure>
 
-|                  | Conda              | Easybuild          | Modules            | Singularity        | Spack              |
-|------------------------|--------------------|--------------------|--------------------|--------------------|--------------------|
-| Dependency Management  | :heavy_check_mark: | :heavy_check_mark: | :x:                | :heavy_check_mark: | :heavy_check_mark: |
-| Compilation            | :heavy_check_mark: | :heavy_check_mark: | :x:                | :x:                | :heavy_check_mark: |
-| Preconfigured Binaries | :x:                | :heavy_check_mark: | :x:                | :heavy_check_mark: | :small_blue_diamond:  |
-| Multiple Versions      | :small_blue_diamond:  | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
+|                  | Conda   | Easybuild | Modules | Singularity | Spack   |
+|------------------|---------|-----------|---------|-------------|---------|
+| Dependency Management  | ✅ | ✅ | ❌ | ✅ | ✅ |
+| Compilation            | ✅ | ✅ | ❌ | ❌ | ✅ |
+| Preconfigured Binaries | ❌ | ✅ | ❌ | ✅ | ◆ |
+| Multiple Versions      | ◆ | ✅ | ✅ | ✅ | ✅ |
 
 </figure>
 
@@ -96,7 +96,7 @@ More information on the features:
   - **Preconfigured Binaries** - The ecosystem provides binaries of the available software for quicker installation to get applications installed quickly
   - **Multiple Versions** - The ecosystem allows for installation of multiple versions of software which can be toggled between
 
-:small_blue_diamond: is for partial support. Technically these features are supported in certain use cases and with additional work. This is not considered full support as multiple versions may require undocumented or uncommon use-cases of the tool
+◆ is for partial support. Technically these features are supported in certain use cases and with additional work. This is not considered full support as multiple versions may require undocumented or uncommon use-cases of the tool
 
 ### Conda Usage Example
 

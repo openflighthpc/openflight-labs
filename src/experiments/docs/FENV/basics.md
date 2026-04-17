@@ -11,7 +11,7 @@ This provides some quick tips to activating the system and finding out more abou
 To load the system, simply run `flight start` (which, when first run, will generate some login keys for allowing passwordless login to compute nodes)
 
 
-![](/images/knowledge/flight-environment/flight_start.png)
+![Flight Start Command](/assets/images/docs/FENV/flight_start.png)
 
 > The flight system can be set to automatically start on login for the user by running `flight set always on`
 

@@ -1,6 +1,6 @@
 ---
 title: Flight Silo
-order: 3
+order: 4
 ---
 
 ## Overview
@@ -22,7 +22,7 @@ Use `flight silo type avail` to list all available platform types and their curr
 └───────────┴───────────────────────────────┴──────────┘
 ```
 
-Types are not prepared by default. To prepare a type you must [become the root user]({{< relref "knowledge/hpc-environment-basics/cli-basics/becoming-root.md" >}}), and then do `flight silo type prepare <type>`. e.g.
+Types are not prepared by default. To prepare a type you must become the root user, and then do `flight silo type prepare <type>`. e.g.
 ```bash
 [root@chead1 ~]# flight silo type prepare aws
 Preparing...

@@ -1,6 +1,6 @@
 ---
 title: Flight Profile
-order: 3
+order: 7
 ---
 
 Flight profile is a tool that manages the profiles of cluster nodes. In this context, a profile is a cluster type (e.g. SLURM, Kubernetes, Jupyter Lab), and the different types of nodes are identities. For example, a profile might be `slurm multinode`, and the identities would be `login` and `compute`. This page covers the sub-commands of `flight profile`, which are run in the format `flight profile <sub-command> --<option>`.
@@ -104,11 +104,11 @@ Applies an identity to one or more nodes. e.g. `flight profile apply node01,node
 - `--force` - Overwrite the identity of a node that has already been applied to.
 - `--remove-on-shutdown` - Adds a systemd hook to the node which will trigger removal from the cluster on shutdown if the node's identity supports removal.
 - `--wait` - Don't background the process of removal
-- `--groups` - Select nodes to apply to based on [hunter groups]({{< relref "knowledge/flight-environment/flight-admin-tools/flight-hunter.md" >}}#modify-groups-node)
-- `--detect-identity` - Attempt to automatically determine the identity to apply based on the [hunter groups]({{< relref "knowledge/flight-environment/flight-admin-tools/flight-hunter.md" >}}#modify-groups-node) of the node. If any group matches that of the available identities for the current cluster type, it will be applied.
+- `--groups` - Select nodes to apply to based on hunter groups
+- `--detect-identity` - Attempt to automatically determine the identity to apply based on the hunter groups of the node. If any group matches that of the available identities for the current cluster type, it will be applied.
 - `--dry-run` - Show which identities would be applied to which nodes without actually performing apply process
 
-> You can select multiple nodes at once by writing a comma separated list, or with square bracket expansion (like [genders syntax]({{< relref "knowledge/hpc-environment-basics/genders-pdsh.md" >}}#creating-a-genders-file)). For example, `apply node[01-02] compute` would apply `compute` to `node01` and `node02`
+> You can select multiple nodes at once by writing a comma separated list, or with square bracket expansion (like genders syntax). For example, `apply node[01-02] compute` would apply `compute` to `node01` and `node02`
 
 ---
 
@@ -170,7 +170,7 @@ Removes the identity of a node, so that it is no longer works as part of the clu
 
 > `remove` is limited to only some identities, so not all identities can be removed.
 
-> You can select multiple nodes at once by writing a comma separated list, or with square bracket expansion (like [genders syntax]({{< relref "knowledge/hpc-environment-basics/genders-pdsh.md" >}}#creating-a-genders-file)). For example, `remove node[01-02] compute` would remove `node01` and `node02`
+> You can select multiple nodes at once by writing a comma separated list, or with square bracket expansion (like genders syntax). For example, `remove node[01-02] compute` would remove `node01` and `node02`
 
 ---
 
@@ -192,7 +192,7 @@ Profile can automatically apply an identity to a node with the auto-apply config
 
 1. Open the file `/opt/flight/opt/hunter/etc/config.yml`
 
-    > You will need to have [root user permissions]({{< relref "knowledge/hpc-environment-basics/cli-basics/becoming-root.md" >}}) to edit this config file.
+    > You will need to have root user permissions to edit this config file.
 
 2. Add these lines:
     ```
@@ -216,7 +216,7 @@ Profile can automatically remove nodes when they are shutdown, additionally it c
 
 1. Open the file `/opt/flight/opt/hunter/etc/config.yml`
 
-    > You will need to have [root user permissions]({{< relref "knowledge/hpc-environment-basics/cli-basics/becoming-root.md" >}}) to edit this config file.
+    > You will need to have root user permissions to edit this config file.
 
 1. Add the following lines:
     ```yaml
