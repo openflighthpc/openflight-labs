@@ -1,4 +1,4 @@
-<a href="{{ ('/lab/' ~ (id | lower) ~ '/') | url }}" class="specimen-card">
+<a href="{{ ('/lab/' ~ id ~ '/') | url }}" class="specimen-card">
   <div class="specimen-card__image">
     {% if thumbnail %}
     <img src="{{ thumbnail }}" alt="{{ title }}" loading="lazy">
