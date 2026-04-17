@@ -7,7 +7,7 @@ permalink: /lab/FENV/
 hypothesis: 'A collection of tools for HPC environment accessibility and management'
 date_start: 2019-08-01
 links:
-  - label: GitHub Organization
+  - label: GitHub Organisation
     url: https://github.com/openflighthpc
 ---
 
@@ -42,6 +42,13 @@ The Flight Web Suite provides web-based access to HPC environments:
 - **Desktop** - Create and manage remote desktop sessions
 - **File Manager** - Upload and download files in the user environment
 - **Job** - Create and manage job scripts and execution
+
+![Web Suite Landing Page](/assets/images/experiments/FENV/flight_web_landing.png)
+![Web Suite Landing Page Showing Apps](/assets/images/experiments/FENV/flight_web_landing_apps.png)
+![Flight Console](/assets/images/experiments/FENV/flight_web_console.png)
+![Flight Desktop Sessions Page](/assets/images/experiments/FENV/flight_web_desktop_landing_sessions.png)
+![Flight Desktop Session View](/assets/images/experiments/FENV/flight_web_desktop_vnc.png)
+![Flight File Manager](/assets/images/experiments/FENV/flight_web_filemanager_files.png)
 
 ## Flight Admin Tools
 
