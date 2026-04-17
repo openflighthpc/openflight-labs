@@ -1,0 +1,71 @@
+---
+layout: base.njk
+---
+
+{# Get docs for this experiment and find position #}
+{% set experimentDocs = collections.docsByExperiment[experimentId] or [] %}
+{% set totalPages = experimentDocs.length %}
+{% set currentPageIndex = -1 %}
+{% for doc in experimentDocs %}
+  {% if doc.url == page.url %}
+    {% set currentPageIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{# Set prev/next pages #}
+{% if currentPageIndex > 0 %}
+  {% set prevPage = experimentDocs[currentPageIndex - 1] %}
+{% endif %}
+{% if currentPageIndex < experimentDocs.length - 1 %}
+  {% set nextPage = experimentDocs[currentPageIndex + 1] %}
+{% endif %}
+
+{# Get experiment title #}
+{% set experiment = collections.experiments | findExperiment(experimentId) %}
+{% if experiment %}
+  {% set experimentTitle = experiment.data.title %}
+{% else %}
+  {% set experimentTitle = experimentId %}
+{% endif %}
+
+<div class="doc-page">
+  <article class="lined-paper">
+    <header class="lined-paper__header">
+      <div class="lined-paper__meta">
+        <span class="lined-paper__experiment-id">{{ experimentId }}</span>
+        <span class="lined-paper__page">Page {{ currentPageIndex + 1 }} of {{ totalPages }}</span>
+      </div>
+      <h1 class="lined-paper__title">{{ title }}</h1>
+    </header>
+
+    <div class="lined-paper__content">
+      {{ content | safe }}
+    </div>
+
+    <footer class="lined-paper__footer">
+      {% if prevPage %}
+      <a href="{{ prevPage.url }}" class="lined-paper__nav lined-paper__nav--prev">
+        <span class="lined-paper__nav-label">Previous</span>
+        <span class="lined-paper__nav-title">{{ prevPage.data.title }}</span>
+      </a>
+      {% else %}
+      <div></div>
+      {% endif %}
+
+      {% if nextPage %}
+      <a href="{{ nextPage.url }}" class="lined-paper__nav lined-paper__nav--next">
+        <span class="lined-paper__nav-label">Next</span>
+        <span class="lined-paper__nav-title">{{ nextPage.data.title }}</span>
+      </a>
+      {% endif %}
+    </footer>
+  </article>
+
+  <nav class="doc-breadcrumb">
+    <a href="{{ '/' | url }}">Archive</a>
+    <span class="doc-breadcrumb__sep">›</span>
+    <a href="{{ '/lab/' ~ experimentId ~ '/' | url }}">{{ experimentTitle }}</a>
+    <span class="doc-breadcrumb__sep">›</span>
+    <span>{{ title }}</span>
+  </nav>
+</div>

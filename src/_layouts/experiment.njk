@@ -48,6 +48,21 @@ layout: base.njk
       {{ content | safe }}
     </div>
 
+    {% set experimentDocs = collections.docsByExperiment[id] %}
+    {% if experimentDocs and experimentDocs.length > 0 %}
+    <section class="experiment-section">
+      <h2 class="experiment-section__title">Documentation</h2>
+      <div class="doc-links">
+        {% for doc in experimentDocs %}
+        <a href="{{ doc.url }}" class="doc-link">
+          <span class="doc-link__icon">📝</span>
+          <span>{{ doc.data.title }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </section>
+    {% endif %}
+
     {% if links and links.length > 0 %}
     <section class="experiment-section">
       <h2 class="experiment-section__title">Links</h2>

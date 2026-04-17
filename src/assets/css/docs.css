@@ -1,0 +1,339 @@
+/* ==========================================================================
+   Documentation Packet Styles - Lined Paper Notes
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Lined Paper Container
+   -------------------------------------------------------------------------- */
+.lined-paper {
+  background: #fefef9;
+  position: relative;
+  max-width: 720px;
+  margin: var(--space-xl) auto;
+  padding: 0;
+  box-shadow:
+    0 2px 8px rgba(0, 0, 0, 0.1),
+    0 8px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 2px;
+}
+
+/* Paper edge effect */
+.lined-paper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(200, 185, 170, 0.1) 0%,
+    transparent 3px
+  );
+  pointer-events: none;
+}
+
+/* Horizontal lines */
+.lined-paper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: repeating-linear-gradient(
+    transparent 0px,
+    transparent 27px,
+    rgba(180, 180, 200, 0.25) 27px,
+    rgba(180, 180, 200, 0.25) 28px
+  );
+  pointer-events: none;
+}
+
+/* Red margin line */
+.lined-paper__content {
+  position: relative;
+  padding: 40px 30px 40px 60px;
+  min-height: 400px;
+}
+
+.lined-paper__content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  width: 1px;
+  background: rgba(200, 100, 100, 0.3);
+}
+
+/* --------------------------------------------------------------------------
+   Header
+   -------------------------------------------------------------------------- */
+.lined-paper__header {
+  padding: 20px 30px 20px 60px;
+  border-bottom: 1px dashed rgba(150, 150, 150, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.lined-paper__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-sm);
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+}
+
+.lined-paper__experiment-id {
+  background: var(--color-label-bg);
+  border: 1px solid var(--color-border);
+  padding: 2px 8px;
+  border-radius: 2px;
+}
+
+.lined-paper__page {
+  opacity: 0.7;
+}
+
+.lined-paper__title {
+  font-family: var(--font-accent);
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* --------------------------------------------------------------------------
+   Content Styling
+   -------------------------------------------------------------------------- */
+.lined-paper__content {
+  font-family: var(--font-accent);
+  font-size: 1.1rem;
+  line-height: 28px;
+  color: #2a2a3a;
+  position: relative;
+  z-index: 1;
+}
+
+.lined-paper__content p {
+  margin-bottom: 28px;
+}
+
+.lined-paper__content h2 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(150, 150, 150, 0.3);
+  line-height: 1.3;
+}
+
+.lined-paper__content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.lined-paper__content ul,
+.lined-paper__content ol {
+  margin-left: 24px;
+  margin-bottom: 28px;
+}
+
+.lined-paper__content li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.lined-paper__content li::marker {
+  color: var(--color-accent);
+}
+
+.lined-paper__content code {
+  font-family: var(--font-label);
+  font-size: 0.9em;
+  background: rgba(200, 200, 200, 0.15);
+  padding: 2px 6px;
+  border-radius: 2px;
+  border-bottom: 1px solid rgba(200, 200, 200, 0.3);
+}
+
+.lined-paper__content pre {
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  background: rgba(245, 245, 245, 0.8);
+  padding: 16px 20px;
+  overflow-x: auto;
+  margin: 20px -30px 28px 10px;
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-accent);
+  line-height: 1.5;
+}
+
+.lined-paper__content pre code {
+  background: none;
+  padding: 0;
+  border: none;
+}
+
+.lined-paper__content a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-underline-offset: 3px;
+}
+
+.lined-paper__content a:hover {
+  color: var(--color-accent-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Footer Navigation
+   -------------------------------------------------------------------------- */
+.lined-paper__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 20px 30px;
+  border-top: 1px dashed rgba(150, 150, 150, 0.3);
+  position: relative;
+  z-index: 1;
+}
+
+.lined-paper__nav {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card-bg);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  max-width: 45%;
+}
+
+.lined-paper__nav:hover {
+  border-color: var(--color-accent);
+  background: rgba(107, 142, 107, 0.05);
+  text-decoration: none;
+}
+
+.lined-paper__nav--prev {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.lined-paper__nav--next {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.lined-paper__nav-label {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-light);
+  margin-bottom: 4px;
+}
+
+.lined-paper__nav-title {
+  font-family: var(--font-accent);
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumb
+   -------------------------------------------------------------------------- */
+.doc-breadcrumb {
+  max-width: 720px;
+  margin: var(--space-lg) auto;
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
+.doc-breadcrumb a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.doc-breadcrumb a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.doc-breadcrumb__sep {
+  margin: 0 var(--space-sm);
+  opacity: 0.5;
+}
+
+/* --------------------------------------------------------------------------
+   Doc Link on Experiment Page
+   -------------------------------------------------------------------------- */
+.doc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-label-bg);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+  margin-top: var(--space-md);
+  transition: all var(--transition-fast);
+}
+
+.doc-link:hover {
+  background: var(--color-card-bg);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.doc-link__icon {
+  font-size: 1.1em;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  .lined-paper {
+    margin: var(--space-md);
+  }
+
+  .lined-paper__content {
+    padding: 20px 20px 20px 45px;
+  }
+
+  .lined-paper__content::before {
+    left: 35px;
+  }
+
+  .lined-paper__header {
+    padding: 16px 20px 16px 45px;
+  }
+
+  .lined-paper__footer {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .lined-paper__nav {
+    max-width: 100%;
+  }
+}

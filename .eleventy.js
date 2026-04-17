@@ -76,6 +76,35 @@ module.exports = function(eleventyConfig) {
     return byStatus;
   });
 
+  // Collection for documentation packets grouped by experiment ID
+  eleventyConfig.addCollection('docsByExperiment', function(collectionApi) {
+    const docs = collectionApi.getFilteredByGlob('src/experiments/docs/**/*.md');
+    const byExperiment = {};
+
+    docs.forEach(doc => {
+      // Extract experiment ID from path: src/experiments/docs/CTR1L/01-intro.md
+      const match = doc.inputPath.match(/\/docs\/([A-Z0-9]+)\//);
+      if (match) {
+        const experimentId = match[1];
+        if (!byExperiment[experimentId]) {
+          byExperiment[experimentId] = [];
+        }
+        byExperiment[experimentId].push(doc);
+      }
+    });
+
+    // Sort each experiment's docs by order field
+    Object.keys(byExperiment).forEach(id => {
+      byExperiment[id].sort((a, b) => {
+        const orderA = a.data.order || 999;
+        const orderB = b.data.order || 999;
+        return orderA - orderB;
+      });
+    });
+
+    return byExperiment;
+  });
+
   // Filter to format dates
   eleventyConfig.addFilter('formatDate', function(dateString) {
     if (!dateString) return '';
@@ -110,6 +139,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('lower', function(str) {
     if (!str) return '';
     return str.toLowerCase();
+  });
+
+  // Filter to find experiment by ID
+  eleventyConfig.addFilter('findExperiment', function(experiments, id) {
+    if (!experiments || !id) return null;
+    return experiments.find(exp => exp.data.id === id);
   });
 
   return {
