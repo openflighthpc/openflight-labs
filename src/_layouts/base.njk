@@ -7,15 +7,15 @@
   <title>{{ title | default(site.name) }}{% if title %} | {{ site.name }}{% endif %}</title>
 
   <!-- Fonts -->
-  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | url }}">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/specimen.css">
-  <link rel="stylesheet" href="/assets/css/scribble.css">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/specimen.css' | url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/scribble.css' | url }}">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/images/favicon.svg' | url }}">
 </head>
 <body>
   {% include "nav.njk" %}
@@ -27,6 +27,6 @@
   {% include "footer.njk" %}
 
   <!-- Scripts -->
-  <script src="/assets/js/polaroid.js"></script>
+  <script src="{{ '/assets/js/polaroid.js' | url }}"></script>
 </body>
 </html>
