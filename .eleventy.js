@@ -2,6 +2,20 @@ module.exports = function(eleventyConfig) {
   // Pass through assets (images, fonts, etc.)
   eleventyConfig.addPassthroughCopy('src/assets');
 
+  // Transform: Convert img tags with video extensions to video elements
+  eleventyConfig.addTransform('videoEmbed', function(content) {
+    // Skip non-HTML output
+    if (!this.outputPath || !this.outputPath.endsWith('.html')) {
+      return content;
+    }
+
+    // Replace img tags pointing to video files with video elements
+    return content.replace(
+      /<img([^>]*)src=["']([^"']+\.(mp4|webm|ogg|mov))["']([^>]*)alt=["']([^"']*)["']([^>]*)\/?>/gi,
+      '<video$1src="$2"$4$6 controls playsinline muted loop><span class="video-caption">$5</span></video>'
+    );
+  });
+
   // Create experiments collection - all .md files in src/experiments/
   eleventyConfig.addCollection('experiments', function(collectionApi) {
     return collectionApi.getFilteredByGlob('src/experiments/*.md')
