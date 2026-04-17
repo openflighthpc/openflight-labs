@@ -3,17 +3,13 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
 
   // Transform: Convert img tags with video extensions to video elements
-  // and add pathPrefix to all asset paths
   eleventyConfig.addTransform('assetPaths', function(content) {
     // Skip non-HTML output
     if (!this.outputPath || !this.outputPath.endsWith('.html')) {
       return content;
     }
 
-    // Path prefix for GitHub Pages
-    const pathPrefix = '/openflight-labs/';
-
-    // First, handle video files: convert p>img to div.polaroid-video>video
+    // Handle video files: convert p>img to div.polaroid-video>video
     content = content.replace(
       /<p><img([^>]*)><\/p>/gi,
       function(match, attrs) {
@@ -24,28 +20,16 @@ module.exports = function(eleventyConfig) {
 
         // Extract src attribute
         const srcMatch = attrs.match(/src=["']([^"']+)["']/i);
-        let src = srcMatch ? srcMatch[1] : '';
+        const src = srcMatch ? srcMatch[1] : '';
 
         // Extract alt attribute
         const altMatch = attrs.match(/alt=["']([^"']*)["']/i);
         const alt = altMatch ? altMatch[1] : '';
 
         if (src && /\.(mp4|webm|ogg|mov)$/i.test(src)) {
-          // Prepend pathPrefix to absolute paths
-          if (src.startsWith('/')) {
-            src = pathPrefix + src.slice(1);
-          }
           return '<div class="polaroid-video"><video src="' + src + '" data-caption="' + alt + '" controls playsinline muted loop></video></div>';
         }
         return match;
-      }
-    );
-
-    // Then, add pathPrefix to remaining image src attributes pointing to /assets/
-    content = content.replace(
-      /(<img[^>]*src=["'])(\/assets\/[^"']+)(["'][^>]*>)/gi,
-      function(match, before, src, after) {
-        return before + pathPrefix + src.slice(1) + after;
       }
     );
 
@@ -139,7 +123,6 @@ module.exports = function(eleventyConfig) {
     templateFormats: ['md', 'njk', 'html'],
     markdownTemplateEngine: 'njk',
     htmlTemplateEngine: 'njk',
-    dataTemplateEngine: 'njk',
-    pathPrefix: '/openflight-labs/'
+    dataTemplateEngine: 'njk'
   };
 };
