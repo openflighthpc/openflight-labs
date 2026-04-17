@@ -15,11 +15,13 @@ links:
 
 Flight Control is a Ruby on Rails application for tracking costs and managing instances on AWS and Azure. It provides visibility into cloud computing costs across projects, enables instance lifecycle management, and helps enforce budget limits through automated recommendations and actions.
 
+![A preview video of Flight Control with added carbon accounting](/assets/videos/experiments/CTR1L/flight-control-preview.mp4)
+
 ## Key Features
 
 ### Cost Tracking
 - Record and view costs for projects hosted on AWS and Azure
-- Dashboard visibility into resource utilization
+- Dashboard visibility into resource utilisation
 - Historical cost logging and reporting
 
 ### Instance Management
@@ -30,7 +32,7 @@ Flight Control is a Ruby on Rails application for tracking costs and managing in
 ### Budget Management
 - Budget policies with automated switch-off recommendations
 - Idle node detection with auto-shutdown capabilities
-- CPU monitoring to identify underutilized resources
+- CPU monitoring to identify underutilised resources
 
 ### Integration
 - Slack notifications for alerts and reports
@@ -42,12 +44,12 @@ Flight Control is a Ruby on Rails application for tracking costs and managing in
 
 ## Use Cases
 
-Flight Control helps organizations:
+Flight Control helps organisations:
 
 - Monitor cloud computing costs across multiple projects and platforms
 - Manage compute instance lifecycles to reduce waste
 - Enforce budget limits through automated recommendations
-- Provide visibility into resource utilization through dashboards
+- Provide visibility into resource utilisation through dashboards
 - Coordinate team access with role-based permissions
 
 This tool addresses the challenge of running cost-effective cloud HPC by providing the management and monitoring capabilities needed to keep costs predictable and controlled.
