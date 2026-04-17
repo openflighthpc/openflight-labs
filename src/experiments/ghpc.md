@@ -9,6 +9,8 @@ date_start: 2025-11-01
 links:
   - label: Website
     url: https://ghpc.openflighthpc.org
+  - label: Documentation Wrapper
+    url: https://github.com/alces-flight/ghpc-docs
 ---
 ![A short animation showing the launch process of this stack](/assets/images/experiments/GHPC/ghpc-how-it-works.gif)
 ## Overview
