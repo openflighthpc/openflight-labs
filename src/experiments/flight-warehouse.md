@@ -21,6 +21,11 @@ This experiment sought to expose key considerations with HPC environments: workl
 
 Flight Warehouse was built around Flight Solo, the packaged cloud image containing Flight Tools and helpers to jumpstart HPC environment creation. It provided templates and workflows for deploying complete HPC stacks in private cloud environments.
 
+![Flight Warehouse homepage showing available templates](/assets/images/experiments/WHSE/warehouse-1.png)
+![Launch instructions for SLURM Team Edition](/assets/images/experiments/WHSE/warehouse-2.png)
+![End-User instructions for SLURM Team Edition](/assets/images/experiments/WHSE/warehouse-3.png)
+![Admin instructions for SLURM Team Edition](/assets/images/experiments/WHSE/warehouse-4.png)
+
 ## Outcomes
 
 - Provided cloud templates for HPC environments
