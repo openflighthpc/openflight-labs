@@ -21,9 +21,9 @@ The image comes loaded with a job scheduler, applications, and remote desktop se
 
 Flight Solo is built on three key components:
 
-- **HPC-Optimised Rocky 9 OS** - A clean Rocky EL9 image tweaked for HPC workloads with kernel drivers supporting most virtualization platforms and suitable security settings
+- **HPC-Optimised Rocky 9 OS** - A clean Rocky EL9 image tweaked for HPC workloads with kernel drivers supporting most virtualisation platforms and suitable security settings
 - **Cloud-Init Integration** - Injects runtime information and configuration into the OS of cloud systems for flexible setup
-- **Flight Environment** - The complete Flight Environment is installed by default with configuration optimizations
+- **Flight Environment** - The complete Flight Environment is installed by default with configuration optimisations
 
 ## Use Cases
 

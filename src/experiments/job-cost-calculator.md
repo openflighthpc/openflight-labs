@@ -13,11 +13,11 @@ links:
 
 ## Overview
 
-The Job Cost Calculator is a proof-of-concept Ruby application that analyzes historic Slurm jobs to determine suitable cloud instances for running them and estimates the associated costs. This helps organizations understand the financial implications of migrating HPC workloads to cloud infrastructure.
+The Job Cost Calculator is a proof-of-concept Ruby application that analyses historic Slurm jobs to determine suitable cloud instances for running them and estimates the associated costs. This helps organisations understand the financial implications of migrating HPC workloads to cloud infrastructure.
 
 ## How It Works
 
-The tool analyzes Slurm job data from `sacct` command output, examining resource requirements such as GPUs, CPUs, memory, and node counts. It then recommends appropriate cloud instances from AWS or Azure based on these requirements and calculates the costs for running jobs on those instances.
+The tool analyses Slurm job data from `sacct` command output, examining resource requirements such as GPUs, CPUs, memory, and node counts. It then recommends appropriate cloud instances from AWS or Azure based on these requirements and calculates the costs for running jobs on those instances.
 
 It would output per job costs
 ```
@@ -44,9 +44,9 @@ Average best fit cost per job: $40.06
 
 ## Key Features
 
-- Analyzes Slurm job history to extract resource requirements
+- Analyses Slurm job history to extract resource requirements
 - Recommends appropriate cloud instances (AWS or Azure) based on job needs
-- Supports GPU-optimized, compute-optimized, and memory-optimized instance categories
+- Supports GPU-optimised, compute-optimised, and memory-optimised instance categories
 - Calculates costs for running jobs on recommended instances
 - Optional CSV export for reporting
 - Options to include failed jobs, ignore node counts, or use customer-facing instance names
@@ -54,9 +54,9 @@ Average best fit cost per job: $40.06
 
 ## Use Case
 
-This tool helps organizations planning to migrate HPC workloads to the cloud by:
+This tool helps organisations planning to migrate HPC workloads to the cloud by:
 
-- Understanding their actual resource utilization patterns
+- Understanding their actual resource utilisation patterns
 - Getting cost estimates before committing to cloud infrastructure
 - Identifying the most cost-effective instance types for their workloads
 - Planning budget allocation for cloud computing resources
